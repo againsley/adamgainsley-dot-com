@@ -19,7 +19,7 @@
   display: inline;
 }
 
-.menu > li:before {
+.menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
 }
