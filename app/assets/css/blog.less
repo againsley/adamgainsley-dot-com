@@ -1,0 +1,274 @@
+// The blue
+@theme_blue: #496f7e;
+
+// post links
+@post_link_bg: #ABDFFF;
+
+// post links in list
+@post_link_color: #555555;
+
+@accent: darken(@theme_blue,20);
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  font-size:18px;
+}
+
+.topbar {
+  background-image: url("images/paper.gif");
+  background: #4C72AA;
+  color: #FFFFFF;
+  width:100%;
+  z-index:9999;
+  padding:5px 20px;
+  text-align: center;
+  height: 225px;
+
+  .container {
+    margin-top: 30px;
+  }
+  
+  h1 {
+    cursor:pointer;
+    font-size: 56px;
+  }
+  
+  nav {
+    margin-top:25px;
+    
+    ul {
+      padding:0;
+      margin:0;
+      
+      li {
+        display:inline-block;
+        padding:10px;
+        
+        p {
+          color:white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+  
+  ul.post-grid {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    
+    li {
+      padding:20px;
+      cursor:pointer;
+      transition: background linear 0.5s;
+      border-bottom:1px solid @accent;
+      
+      &:hover {
+      background:@accent;
+      color:white;
+      
+        h3 {
+          color: white;
+        }
+       
+      }
+    }
+  }
+
+
+.content {
+  width:100%;
+  position:relative;
+  padding:20px 40px 20px;
+}
+
+ h2, h3 {
+    color: @accent;
+  }
+
+.post {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+  opacity:1;
+  padding-bottom:30px;
+  
+  cite {
+    padding:10px 0;
+  }
+}
+
+.comments {
+  ul {
+    margin:0;
+    padding:0;
+    li {
+      list-style-type:none;
+      padding:20px 5px;
+      border-bottom:1px @theme_blue solid;
+    }
+  }
+}
+
+.post.ng-hide {
+  opacity:0;
+}
+
+.post.ng-hide-add, .post.ng-hide-remove {
+  display:block!important;
+}
+
+form {
+  width:100%;
+}
+input, textarea {
+  display:block;
+  width:100%;
+  padding:10px;
+  font-size:1.1em;
+}
+
+.ng-invalid.ng-dirty {
+  border-color:red;
+}
+
+.ng-valid.ng-dirty {
+  border-color:green;
+}
+
+img {
+  max-width:100%;
+}
+
+.post_list_item {
+  margin-bottom: 5px;
+
+  a {
+    color:black;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: @post_link_color;
+    text-decoration:none;
+  }
+}
+
+// extend bs3 navbar
+.navbar_margins {
+  margin: 0 55px 0 55px;
+}
+
+#navbar-custom {
+  
+}
+
+#navbar-link-1 {
+  color: #DEDEDE;
+  font-family: "Arsenal bold";
+  font-size: 24px;
+
+  &:hover {
+    color:#FFFFFF;
+  }
+}
+
+#navbar-link-2 {
+  color: #DEDEDE;
+  font-family: "Arsenal bold";
+
+  &:hover {
+    color:#FFFFFF;
+  }
+}
+
+.navbar-inverse .navbar-nav > li > i {
+  display:block;
+}
+
+// secondary nav
+#secondary-nav {
+  background-color: #F9F9F9;
+  min-height: 25px;
+  height: 25px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+#secondary_nav_container {
+  min-height: 25px;
+  height: 25px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  line-height: 25px;
+
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.secondary_nav_link {
+  text-decoration: none;
+  color: #072715;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#tabs {
+  background-color: rgba(0,0,0,0);
+}
+
+.even-row {
+  width:100%;
+  background-color:@theme_blue; 
+  margin:0px;
+  padding:0px;
+}
+
+.odd-row {
+  background-color:#FFFFFF;
+}
+
+.odd_parallax_row {
+  background-color:rgba(0,0,0,0); 
+}
+
+.blue-font {
+  color:@theme_blue;
+}
+
+#full-width-body {
+  margin:0;
+  padding:0px 0px 25px 0px;
+  width:100%;
+}
+
+.white-font {
+  color:#ffffff;
+}
+
+@center_gap_pad: 20px;
+.thumbnail-override-left {
+  padding:0 @center_gap_pad 0 0;
+}
+
+.thumbnail-override-right {
+  padding:0 0 0 @center_gap_pad;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("../img/wood_background.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
