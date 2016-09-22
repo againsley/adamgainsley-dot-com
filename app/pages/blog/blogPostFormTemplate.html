@@ -1,0 +1,17 @@
+<h2>New Post</h2>
+
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="title" 
+      placeholder="Name me..."
+      ng-model="blog.new_post.title">
+  </div>
+  <div class="form-group">
+    <text-angular ng-model="blog.new_post.content"></text-angular>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="blog.save_post(id)">Save</button>
+</form>

@@ -1,0 +1,11 @@
+<ul>
+  <li 
+    ng-repeat="post in blog.posts" 
+    ng-click="blog.display_selected_post(post.id)">
+    <p class="post_list_item">
+      <a style="display:block;">
+        <span>{{post.title}}</span> - <cite>by {{post.author}} on {{post.created_on | date}}
+      </a>
+    </p>
+  </li>
+</ul>

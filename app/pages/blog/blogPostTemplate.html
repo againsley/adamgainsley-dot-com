@@ -1,0 +1,7 @@
+<h2>{{blog.selected_post.title}}</h2>
+<img src="{{blog.selected_post.image}}" ng-show="{{blog.selected_post.thumbnail}}"/>
+<cite>by {{blog.selected_post.author}} on {{blog.selected_post.created_on | date}}</cite>
+<div class="post-body">
+  <div ng-bind-html="blog.selected_post.body">
+  </div>
+</div>
