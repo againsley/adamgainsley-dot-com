@@ -1,3 +1,5 @@
+#Note: The below is no longer sufficient to get this code base up and running. I may or may not get this up to date...
+
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
