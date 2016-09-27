@@ -1,0 +1,79 @@
+<body ng-app="blogApp">
+  
+  <div ng-controller="blogCtrl as blog">
+
+    <!-- Begin Header -->
+    <div id="banner_background" class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-s-4">
+            <h1 ng-click="blog.set_tab('list')" class="push-left">{{blog.title}}</h1>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Body -->
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="offset-s-4 col-s-4">
+            <nav role='navigation' class="push-right">
+              <ul class="header_nav">
+                <li>
+                  <p ng-click="blog.set_tab('list')">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    See All Posts
+                  </p>
+                </li>
+                 ||
+                <li>
+                  <p ng-click="blog.set_tab('new')">
+                    Add New Post
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                  </p>
+                </li>
+              </ul>
+            </nav> 
+          </div>
+
+          <!-- Posts List -->
+          <div gs-blog-post-list ng-show="blog.display == 'list'"></div>
+
+          <!-- Single Post -->
+          <div gs-blog-post ng-show="blog.display == 'post'">
+            <!-- comment out comments for now
+            <div class="comments" ng-controller="CommentController as commentCtrl">
+
+              <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
+              <h3>Comments</h3>
+              <ul>
+               <li ng-repeat="comment in post.comments">
+                 "{{comment.body}}"
+                 <cite>- <b>{{comment.author}}</b></cite>
+               </li>
+              </ul>
+
+              <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
+
+                <h4>Add Comment</h4>
+                  <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
+                <label for="">by:</label>
+                  <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name"/>
+                <input type="submit" value="Submit" />
+
+              </form>
+              -->
+          </div>
+
+          <!-- New Post Form -->
+          <div gs-blog-post-form ng-show="blog.display == 'new'"></div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Body -->
+        
+  </div>
+</body>
