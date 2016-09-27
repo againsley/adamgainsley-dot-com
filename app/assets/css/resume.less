@@ -4,11 +4,19 @@
   position: relative;
 }
 
+@color1: #2D7DA4;
+
+.progress {
+  .color1, .color1 .bar-width {
+    background: @color1;
+  }
+}
+/*
 .progress .color1,
 .progress .color1 .bar-width{
-  background: #2d7da4;
+  background: @color1;
 }
-
+*/
 .progress .color2,
 .progress .color2 .bar-width{
   background: #6aa42f;
@@ -59,20 +67,6 @@
 .progress span{
   position: relative;
 }
-
-/*
-.progress span:before{
-
-  content: " ";
-  position: absolute;
-  width: auto;
-  height: auto;
-  border-width: 8px 5px;
-  border-style: solid;
-  bottom: -15px;
-  right: 8px;
-}
-*/
 
 .progress .color1 span:before{
   border-color: #2d7da4 transparent transparent transparent;
