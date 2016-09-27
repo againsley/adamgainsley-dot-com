@@ -34,7 +34,7 @@
   box-shadow: none;
   border-radius: 0;
   overflow: visible;
-  text-align: right;
+  text-align: left;
 }
 
 .progress{
@@ -43,22 +43,26 @@
 
 .progress .bar-width{
   position: absolute;
-  width: 40px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-  top: -30px;
-  border-radius: 2px;
-  margin-left: -30px;
+  float:left;
+  padding-left:10px;
+  //width: 40px;
+  //height: 20px;
+  //line-height: 20px;
+  //text-align: center;
+  //font-size: 8px;
+  //font-weight: 700;
+  //top: -30px;
+  //border-radius: 2px;
+  //margin-left: -30px;
 }
 
 .progress span{
   position: relative;
 }
 
+/*
 .progress span:before{
+
   content: " ";
   position: absolute;
   width: auto;
@@ -68,6 +72,7 @@
   bottom: -15px;
   right: 8px;
 }
+*/
 
 .progress .color1 span:before{
   border-color: #2d7da4 transparent transparent transparent;
