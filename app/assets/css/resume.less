@@ -1,3 +1,4 @@
+@import "bootstrap_less/bootstrap.less";
 /* Resume Styles */
 
 .progress-wrap{
@@ -8,7 +9,7 @@
 @color2: #E74D07;
 @color3: #A4454A;
 
-@header_color: #66615b;
+@header_color: #66615B;
 
 .progress {
   position: relative;
@@ -51,7 +52,6 @@
 }
 
 .skills {
-  //box-shadow:inset 0 0 0 13px #fff,inset 0 0 0 14px #eee,inset 0 0 0 15px #fff,inset 0 0 0 16px #eee,inset 0 0 0 17px #fff,inset 0 0 0 18px #eee,inset 0 0 0 19px #fff,inset 0 0 0 20px #eee;
   box-shadow: inset 0 0 0 1px #eee,inset 0 0 0 3px #eee;
   -webkit-transform:translateZ(0px);
   transform:translateZ(0px);
@@ -98,4 +98,44 @@
     margin-top:10px;
     color:@header_color;
   }
+}
+
+.resume-experience-row h2, h3, h4 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.resume-experience-category-label {
+  .make-md-column(2);
+}
+
+.resume-experience-content-container {
+  .make-md-column(7);
+}
+
+.resume-skills-column {
+  .make-md-column(4);
+}
+
+.resume-skills-row {
+  background-color: #FFFFFF;
+  h3, h6 {
+    color: #333333;
+  }
+}
+
+.resume-skills-label {
+  .make-md-column(7);
+
+  h3 {
+    margin-bottom: 0px;
+  }
+}
+
+#skills-label-row {
+  padding-bottom: 0px;
+}
+
+.name {
+  margin-top: 15px;
 }

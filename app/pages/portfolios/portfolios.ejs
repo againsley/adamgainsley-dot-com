@@ -1,3 +1,81 @@
-<% include ../../partials/page_pre_content %>
-        <h1>Portfolios Content Goes Here</h1>
-<% include ../../partials/page_post_content %>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <% include ../../partials/head %>
+
+  <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css" rel="stylesheet">
+
+</head>
+
+<body class="profile-page">
+
+  <!-- Include Top Nav -->
+  <% include ../../partials/top_nav %>
+
+  <!-- Start Content -->
+  <div class="wrapper">
+    <div id="header-row" class="header even-row">
+    </div>
+
+    <div class="profile-content">
+      <div id="full-width-body" class="container">
+
+        <!-- Begin Row 1 -->
+        <div class="row odd-row">
+          <div class="row">
+    <div class="offset-md-2 col-md-8">
+        <div class="row">
+            <a href="img/portrait.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/portrait.jpg" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+            </a>
+        </div>
+        <div class="row">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div>
+        </div><!-- End Row 1 -->
+
+        <!-- Begin Row 2 -->
+        <div class="row even-row">
+          <div class="col-md-6 col-md-offset-3">
+            <p class="white-font">
+              Spicy jalapeno bacon ipsum dolor amet porchetta salami prosciutto, fatback jowl ribeye short loin flank sausage pig tri-tip kevin shank tongue burgdoggen. Pork belly ham pancetta bacon, brisket tongue andouille cupim burgdoggen shank. Hamburger shoulder cow filet mignon short loin. Sirloin short loin fatback, sausage salami ball tip capicola jerky. Prosciutto jowl meatball, corned beef pork chop shankle brisket drumstick leberkas ham.
+            </p>
+          </div>
+        </div><!-- End Row 2 -->
+
+      </div>
+    </div>
+  </div>
+
+  <% include ../../partials/footer %>
+
+</body>
+
+<% include ../../partials/post_scripts %>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
+<script type="text/javascript">
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+</script>
+
+</html>
