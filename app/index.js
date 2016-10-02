@@ -41,6 +41,10 @@ app.get('/contact', function(req, res) {
     res.render('contact/contact');
 });
 
+app.get('/index_tpl', function(req, res) {
+  res.render('index/index_tpl')
+});
+
 
 app.listen(port, (err) => {  
   if (err) {

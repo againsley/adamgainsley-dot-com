@@ -1,5 +1,7 @@
+@import "bootstrap_less/bootstrap.less";
+
 // The blue
-@theme_blue: #496f7e;
+@theme_blue: #496f7E;
 
 // post links
 @post_link_bg: #ABDFFF;
@@ -224,14 +226,23 @@ img {
   background-color: rgba(0,0,0,0);
 }
 
-.even-row {
+.theme-row {
   width:100%;
-  background-color:@theme_blue; 
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding:25px 0 25px 0;
+}
+
+.even-row {
+  .theme-row;
+  background-color:@theme_blue;
+
+  p {
+    color:#ffffff;
+  } 
 }
 
 .odd-row {
+  .theme-row;
   background-color:#FFFFFF;
 }
 
@@ -261,9 +272,7 @@ img {
   padding-left: 10px;
 }
 
-.white-font {
-  color:#ffffff;
-}
+
 
 @center_gap_pad: 20px;
 .thumbnail-override-left {
@@ -274,9 +283,9 @@ img {
   padding:0 0 0 @center_gap_pad;
 }
 
-.parallax { 
+.odd-row { 
     /* The image used */
-    background-image: url("../img/wood_background.jpg");
+    background-image: url("../img/wood_background.png");
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -286,8 +295,18 @@ img {
 }
 
 .contrast {
+  color:#26211b;
+  font-family:"Helvetica";
+}
+
+.contrast-large {
+  .contrast;
   font-size: 20px;
-  color:#26211b
+}
+
+.contrast-small {
+  .contrast;
+  font-size: 16px;
 }
 
 #page_footer {
@@ -302,6 +321,12 @@ img {
 
 
 #navbar-row {
+  //@extend .navbar;
+  //.navbar-transparent;
+  //.navbar-absolute;
+  background-color: @theme_blue;
+  border-radius: 0;
+  box-shadow: none;
   margin-bottom: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -314,4 +339,9 @@ img {
 
 #content-container {
   //margin-top: 0px;
+}
+
+.theme-content-container {
+  .make-md-column(8);
+  .make-md-column-offset(2);
 }
