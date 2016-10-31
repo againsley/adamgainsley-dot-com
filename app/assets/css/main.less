@@ -1,16 +1,15 @@
-// Bootstrap
+/*
+ * main.less
+ *
+ * @author Adam Gainsley
+ *
+ */
+
+/***** Bootstrap Bootstrap *****/
+// TODO: Update to use mixins
 @import "bootstrap/bootstrap.less";
 
-/* mixin workflow
-@import "bootstrap/variables.less";
-@import "bootstrap/utilities.less";
-@import "bootstrap/mixins.less";
-@import "bootstrap/forms.less";
-@import "bootstrap/grid.less";
-@import "bootstrap/navbar.less";
-*/
-
-
+/***** Variables *****/
 // The blue
 @theme_blue: #496f7E;
 
@@ -22,9 +21,18 @@
 
 @accent: darken(@theme_blue,20);
 
-// navbar
+/***** Navbar *****/
 .navbar_margins {
   margin: 0 55px 0 55px;
+}
+
+#navbar-row {
+  background-color: @theme_blue;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .navbar-brand-link {
@@ -42,60 +50,8 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.navbar-nav-link {
+.navbar-link {
   font-family: 'Montserrat', "Helvetica", Arial, sans-serif;
-}
-
-#navbar-link-1 {
-  color: #DEDEDE;
-  font-family: "Arsenal bold";
-  font-size: 24px;
-
-  &:hover {
-    color:#FFFFFF;
-  }
-}
-
-#navbar-link-2 {
-  color: #DEDEDE;
-  font-family: "Arsenal bold";
-
-  &:hover {
-    color:#FFFFFF;
-  }
-}
-
-.navbar-inverse .navbar-nav > li > i {
-  display:block;
-}
-
-// secondary nav
-#secondary-nav {
-  background-color: #F9F9F9;
-  min-height: 25px;
-  height: 25px;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-}
-
-#secondary_nav_container {
-  min-height: 25px;
-  height: 25px;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  line-height: 25px;
-
-  text-align: center;
-  vertical-align: bottom;
-}
-
-.secondary_nav_link {
-  text-decoration: none;
-  color: #072715;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 #tabs {
@@ -103,6 +59,20 @@
   border:none;
 }
 
+/***** Theme Styles *****/
+
+#header-row {
+  min-height: 180px;
+  height: 180px;
+}
+
+#full-width-body {
+  margin:0;
+  padding:0px 0px 0px 0px;
+  width:100%;
+}
+
+// parallax rows
 .theme-row {
   width:100%;
   margin:0;
@@ -112,7 +82,7 @@
 .even-row {
   .theme-row;
   background-color:@theme_blue;
-  color:#ffffff;
+  color:#FFFFFF;
 
   /* 
     have to make this explicit 
@@ -120,27 +90,26 @@
     overrides it...
   */
   h2, h3 {
-    color:#ffffff;
+    color:#FFFFFF;
   }
 }
 
 .odd-row {
   .theme-row;
   background-color:#FFFFFF;
-}
 
-.odd_parallax_row {
-  background-color:rgba(0,0,0,0); 
+  /* The image used */
+    background-image: url("../img/wood_background.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .blue-font {
   color:@theme_blue;
-}
-
-#full-width-body {
-  margin:0;
-  padding:0px 0px 0px 0px;
-  width:100%;
 }
 
 #last_row {
@@ -153,28 +122,6 @@
 
 .footer_link {
   padding-left: 10px;
-}
-
-
-
-@center_gap_pad: 20px;
-.thumbnail-override-left {
-  padding:0 @center_gap_pad 0 0;
-}
-
-.thumbnail-override-right {
-  padding:0 0 0 @center_gap_pad;
-}
-
-.odd-row { 
-    /* The image used */
-    background-image: url("../img/wood_background.png");
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .contrast {
@@ -196,48 +143,36 @@
   padding: 0;
 }
 
-
-#header-row {
-  min-height: 180px;
-  height: 180px;
-}
-
-
-#navbar-row {
-  //@extend .navbar;
-  //.navbar-transparent;
-  //.navbar-absolute;
-  background-color: @theme_blue;
-  border-radius: 0;
-  box-shadow: none;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-#content-container {
-  //margin-top: 0px;
-}
-
 .theme-content-container {
   .make-md-column(8);
   .make-md-column-offset(2);
 }
 
-/* Portfolio Styles */
+/***** Home Page *****/
+
+// Align gallery preview panes
+@center_gap_pad: 20px;
+.thumbnail-override-left {
+  padding:0 @center_gap_pad 0 0;
+}
+
+.thumbnail-override-right {
+  padding:0 0 0 @center_gap_pad;
+}
+
 .gallery-link {
   padding: 15px;
 }
 
-/* Resume Styles */
+/***** Resume Styles *****/
 
 .progress-wrap{
   position: relative;
 }
 
-@color1: #41893A;
-@color2: #E74D07;
-@color3: #A4454A;
+@high_color: #41893A;
+@medium_color: #E74D07;
+@low_color: #A4454A;
 
 @header_color: #66615B;
 
@@ -245,16 +180,16 @@
   position: relative;
   margin-bottom: 15px;
 
-  .color1, .color1 .bar-width {
-    background: @color1;
+  .high_color, .high_color .bar-width {
+    background: @high_color;
   }
 
-  .color2, .color2 .bar-width {
-    background: @color2;
+  .medium_color, .medium_color .bar-width {
+    background: @medium_color;
   }
 
-  .color3, .color3 .bar-width{
-    background: @color3;
+  .low_color, .low_color .bar-width{
+    background: @low_color;
   }
 
   .bar-width{
