@@ -6,3 +6,4 @@
 
 # Where stuff lives
 * custom styles: app/assets/css/main.less
+* page templage: /index_tpl
